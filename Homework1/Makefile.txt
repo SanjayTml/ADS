@@ -1,0 +1,29 @@
+all: Problem1 Problem2 Problem3 Problem4 Problem5 clear
+
+Problem1: program1
+        ./problem1
+program1: h1-1.cpp
+    g++ -Wall -o problem1 h1-1.cpp
+
+Problem2: program2
+        ./problem2
+program2: stack.h testStack.cpp
+    g++ -Wall -o problem2 stack.h testStack.cpp
+
+Problem3: program3
+        ./problem3
+program3: LinkedList.h testLinkedList.cpp
+    g++ -Wall -o problem3 LinkedList.h testLinkedList.cpp
+
+Problem4: program4
+        ./problem4
+program4: h1-4.cpp
+    g++ -Wall -o problem4 h1-4.cpp
+
+Problem5: program5
+        ./problem5
+program5: h1-5.cpp
+    g++ -Wall -o problem5 h1-5.cpp
+
+clear:
+    rm -f *.exe

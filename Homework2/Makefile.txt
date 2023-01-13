@@ -1,0 +1,34 @@
+all: Problem1 Problem2 Problem3 Problem4 Problem5 Problem7 clear
+
+Problem1: program1
+        ./problem1
+program1: h2-1.cpp
+    g++ -Wall -o problem1 h2-1.cpp
+
+Problem2: program2
+        ./problem2
+program2: h2-2.cpp
+    g++ -Wall -o problem2 h2-2.cpp
+
+Problem3: program3
+        ./problem3
+program3: WindGauge.h WindGauge.cpp testWindGauge.cpp
+    g++ -Wall -o problem3 WindGauge.h WindGauge.cpp testWindGauge.cpp
+
+Problem4: program4
+        ./problem4
+program4: h2-4.cpp
+    g++ -Wall -o problem4 h2-4.cpp
+
+Problem5: program5
+        ./problem5
+program5: h2-5.cpp
+    g++ -Wall -o problem5 h2-5.cpp
+
+Problem7: program7
+        ./problem7
+program7: h2-7.cpp
+    g++ -Wall -o problem5 h2-6.cpp
+
+clear:
+    rm -f *.exe

@@ -1,0 +1,9 @@
+all: bonus1 clear
+
+bonus1: program1
+        ./problem1
+program1: Access.h Access.cpp testAccessSet.cpp
+    g++ -Wall -o problem1 Access.h Access.cpp testAccessSet.cpp
+
+clear:
+    rm -f *.exe
